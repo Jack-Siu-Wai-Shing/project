@@ -1,17 +1,81 @@
-.main_body {background-color: red;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 0;
-    margin-top:0;
-    padding-top: 0;
-    border-top:0;
-    
+.container{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width:1200px;
+}
+
+.site-header{
+    background-color: chocolate;
+    position:fixed;
+    z-index:99;
+    top:0;
+    left:0;
+    width:100%
+}
+
+
+
+.site-logo{
+    top:10px;
+    left:10px;
     
 }
 
-ul {background-color: brown;
-    margin-top:0}
+.site-main{
+    background-color: yellow;
+    z-index:1;
+}
 
-ul li {display: inline-block;}
+
+.site-main-inner::after{
+    content:'';
+    display:block;
+    clear:both;
+
+}
+
+.sidebar{
+    height:400px;
+    background-color: forestgreen;
+    width:32%;
+    float:left;
+}
+
+.content{
+    height:400px;
+    width:36%;
+    background-color: darkred;
+    float:left;
+}
+
+.content-big{
+    height:400px;
+    width:68%;
+    background-color: darkred;
+    float:left;
+}
+
+.content-big:only-child{
+    height:400px;
+    width:100%;
+    background-color: darkred;
+}
+
+.sidebar ~ sidebar{
+    height:400px;
+    background-color: forestgreen;
+    width:32%;
+    float:right;
+}
 
 
+
+.site-footer{
+    background-color: aqua;
+    z-index:1;
+}
+
+
+.site-footer-inner{height:100px}
